@@ -13,7 +13,7 @@
         "build": "rollup -c",
         "dev": "rollup -c -w",
         "demo": "npx serve .",
-        "build:demo": "npm run build && mkdir -p demo/dist && cp -r dist/* demo/dist/",
+        "build:demo": "npm run build && mkdir -p demo/dist && cp -r dist/* demo/dist/ && cp dist/black-friday-promo.js demo/",
         "prepublishOnly": "npm run build"
     },
     "keywords": [
