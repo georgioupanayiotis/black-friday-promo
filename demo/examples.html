@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Friday Promo - All Components Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            font-size: 24px;
+            color: #e63946;
+            font-weight: bold;
+        }
+
+        .product-price-old {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        .demo-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-section h2 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🔥 Black Friday Promo Library - Live Examples 🔥</h1>
+
+    <div class="demo-section">
+        <h2>Interactive Demos</h2>
+        <p>Click the buttons below to see each component in action:</p>
+
+        <button onclick="showRibbon()">Show Ribbon</button>
+        <button onclick="showBanner()">Show Banner</button>
+        <button onclick="showMarquee()">Show Marquee</button>
+        <button onclick="showPopup()">Show Popup</button>
+        <button onclick="showCountdown()">Show Countdown</button>
+        <button onclick="showFAB()">Show Floating Button</button>
+        <button onclick="showToast()">Show Toast</button>
+        <button onclick="showSideTab()">Show Side Tab</button>
+        <button onclick="showBadges()">Show Product Badges</button>
+        <button onclick="clearAll()" style="background: #e63946;">Clear All</button>
+    </div>
+
+    <div class="demo-section">
+        <h2>Product Showcase</h2>
+        <p>Hover over products to see badges. Click "Show Product Badges" above to add discount labels.</p>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image" data-product="1"></div>
+                <div class="product-info">
+                    <div class="product-title">Premium Headphones</div>
+                    <div class="product-price">
+                        $49.99
+                        <span class="product-price-old">$99.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image" data-product="2"></div>
+                <div class="product-info">
+                    <div class="product-title">Smart Watch</div>
+                    <div class="product-price">
+                        $149.99
+                        <span class="product-price-old">$299.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image" data-product="3"></div>
+                <div class="product-info">
+                    <div class="product-title">Wireless Earbuds</div>
+                    <div class="product-price">
+                        $39.99
+                        <span class="product-price-old">$79.99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image" data-product="4"></div>
+                <div class="product-info">
+                    <div class="product-title">Laptop Stand</div>
+                    <div class="product-price">
+                        $24.99
+                        <span class="product-price-old">$49.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/dist/black-friday-promo.js"></script>
+    <script>
+        const BFPromo = BlackFridayPromo.default;
+        let activeElements = [];
+
+        function showRibbon() {
+            const ribbon = BFPromo.createRibbon({
+                text: '50% OFF',
+                position: 'top-right',
+                backgroundColor: '#e63946',
+                textColor: '#ffffff',
+                size: 'large'
+            });
+            activeElements.push(ribbon);
+        }
+
+        function showBanner() {
+            const banner = BFPromo.createBanner({
+                text: '🔥 BLACK FRIDAY SALE - 50% OFF EVERYTHING! 🔥',
+                position: 'top',
+                backgroundColor: '#000000',
+                textColor: '#ffffff',
+                dismissible: true
+            });
+            activeElements.push(banner);
+        }
+
+        function showMarquee() {
+            const marquee = BFPromo.createMarquee({
+                text: '🎉 BLACK FRIDAY SALE 🎉 50% OFF 🎉 LIMITED TIME ONLY 🎉 FREE SHIPPING 🎉',
+                backgroundColor: '#ff6b6b',
+                textColor: '#ffffff',
+                speed: 30,
+                pauseOnHover: true
+            });
+            activeElements.push(marquee);
+        }
+
+        function showPopup() {
+            const popup = BFPromo.createPopup({
+                title: 'BLACK FRIDAY SALE! 🎉',
+                text: 'Get 50% OFF on all products. Limited time offer!',
+                buttonText: 'Shop Now',
+                buttonLink: '#',
+                trigger: 'immediate',
+                delay: 500,
+                backgroundColor: '#ffffff',
+                textColor: '#000000'
+            });
+            activeElements.push(popup);
+        }
+
+        function showCountdown() {
+            const endDate = new Date();
+            endDate.setHours(endDate.getHours() + 24);
+
+            const countdown = BFPromo.createCountdown({
+                endDate: endDate,
+                position: 'bottom',
+                backgroundColor: '#1a1a1a',
+                textColor: '#ffffff',
+                fontSize: '20px',
+                showDays: true,
+                showHours: true,
+                showMinutes: true,
+                showSeconds: true
+            });
+            activeElements.push(countdown);
+        }
+
+        function showFAB() {
+            const fab = BFPromo.createFloatingButton({
+                text: 'SALE',
+                icon: '🔥',
+                position: 'bottom-right',
+                backgroundColor: '#ff6b6b',
+                textColor: '#ffffff',
+                link: '#',
+                pulse: true
+            });
+            activeElements.push(fab);
+        }
+
+        function showToast() {
+            const toast = BFPromo.createToast({
+                text: '🎉 Black Friday sale is now live! 50% OFF everything!',
+                position: 'bottom-right',
+                backgroundColor: '#2d3748',
+                textColor: '#ffffff',
+                duration: 5000,
+                showProgress: true
+            });
+            activeElements.push(toast);
+        }
+
+        function showSideTab() {
+            const tab = BFPromo.createSideTab({
+                text: 'SALE',
+                position: 'right',
+                backgroundColor: '#e63946',
+                textColor: '#ffffff',
+                expandedContent: '🔥 Black Friday Sale! Get 50% OFF on all products. Limited time only!'
+            });
+            activeElements.push(tab);
+        }
+
+        function showBadges() {
+            const badges = [
+                { selector: '[data-product="1"]', text: '-50%', position: 'top-right' },
+                { selector: '[data-product="2"]', text: '-50%', position: 'top-left' },
+                { selector: '[data-product="3"]', text: 'HOT', position: 'top-right', backgroundColor: '#ff6b6b' },
+                { selector: '[data-product="4"]', text: 'NEW', position: 'top-left', backgroundColor: '#4ade80' }
+            ];
+
+            badges.forEach(config => {
+                const badge = BFPromo.createBadge(config.selector, {
+                    text: config.text,
+                    position: config.position,
+                    backgroundColor: config.backgroundColor || '#e63946',
+                    textColor: '#ffffff',
+                    shape: 'circle',
+                    size: '60px'
+                });
+                if (badge) activeElements.push(badge);
+            });
+        }
+
+        function clearAll() {
+            activeElements.forEach(el => {
+                if (el && el.remove) el.remove();
+            });
+            activeElements = [];
+        }
+
+        // Auto-show some elements on load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                showToast();
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>

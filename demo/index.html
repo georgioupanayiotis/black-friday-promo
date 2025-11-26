@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Friday Promo Library - Interactive Demo & Code Generator</title>
+    <meta name="description"
+        content="Create stunning Black Friday promotional elements with easy copy-paste code. Ribbons, banners, popups, countdown timers and more!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/demo/styles.css">
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-badge">🔥 2025 Edition</div>
+            <h1 class="hero-title">Black Friday Promo Library</h1>
+            <p class="hero-subtitle">Create stunning promotional elements in seconds. Just configure, copy, and paste!
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">9+</div>
+                    <div class="stat-label">Components</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Dependencies</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">5KB</div>
+                    <div class="stat-label">Minified</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Component Selector -->
+            <section class="component-selector">
+                <h2 class="section-title">Choose Your Component</h2>
+                <div class="component-grid">
+                    <button class="component-card active" data-component="ribbon">
+                        <div class="component-icon">🎀</div>
+                        <div class="component-name">Ribbon</div>
+                        <div class="component-desc">Corner badges</div>
+                    </button>
+                    <button class="component-card" data-component="banner">
+                        <div class="component-icon">📢</div>
+                        <div class="component-name">Banner</div>
+                        <div class="component-desc">Top/bottom bars</div>
+                    </button>
+                    <button class="component-card" data-component="marquee">
+                        <div class="component-icon">📜</div>
+                        <div class="component-name">Marquee</div>
+                        <div class="component-desc">Scrolling text</div>
+                    </button>
+                    <button class="component-card" data-component="popup">
+                        <div class="component-icon">💬</div>
+                        <div class="component-name">Popup</div>
+                        <div class="component-desc">Modal dialogs</div>
+                    </button>
+                    <button class="component-card" data-component="countdown">
+                        <div class="component-icon">⏰</div>
+                        <div class="component-name">Countdown</div>
+                        <div class="component-desc">Timer urgency</div>
+                    </button>
+                    <button class="component-card" data-component="fab">
+                        <div class="component-icon">🎯</div>
+                        <div class="component-name">Floating Button</div>
+                        <div class="component-desc">Sticky CTA</div>
+                    </button>
+                    <button class="component-card" data-component="toast">
+                        <div class="component-icon">🔔</div>
+                        <div class="component-name">Toast</div>
+                        <div class="component-desc">Notifications</div>
+                    </button>
+                    <button class="component-card" data-component="sidetab">
+                        <div class="component-icon">📌</div>
+                        <div class="component-name">Side Tab</div>
+                        <div class="component-desc">Edge promos</div>
+                    </button>
+                    <button class="component-card" data-component="badge">
+                        <div class="component-icon">🏷️</div>
+                        <div class="component-name">Badge</div>
+                        <div class="component-desc">Product labels</div>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Configuration Panel -->
+            <section class="config-panel">
+                <div class="panel-grid">
+                    <!-- Left: Configuration Form -->
+                    <div class="config-form">
+                        <h3 class="panel-title">⚙️ Configuration</h3>
+                        <div id="configOptions" class="config-options">
+                            <!-- Dynamic options will be inserted here -->
+                        </div>
+                        <button id="previewBtn" class="btn btn-primary">
+                            <span>👁️ Preview</span>
+                        </button>
+                    </div>
+
+                    <!-- Right: Code Output -->
+                    <div class="code-output">
+                        <div class="code-header">
+                            <h3 class="panel-title">📋 Your Code</h3>
+                            <button id="copyBtn" class="btn btn-secondary">
+                                <span id="copyText">Copy Code</span>
+                            </button>
+                        </div>
+                        <div class="code-tabs">
+                            <button class="code-tab active" data-tab="vanilla">Vanilla JS</button>
+                            <button class="code-tab" data-tab="react">React</button>
+                            <button class="code-tab" data-tab="cdn">CDN</button>
+                        </div>
+                        <pre id="codeBlock" class="code-block"><code id="codeContent"></code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Installation Guide -->
+            <section class="installation-guide">
+                <h2 class="section-title">📦 Installation</h2>
+                <div class="install-grid">
+                    <div class="install-card">
+                        <h3>NPM</h3>
+                        <pre class="install-code"><code>npm install black-friday-promo</code></pre>
+                    </div>
+                    <div class="install-card">
+                        <h3>CDN</h3>
+                        <pre
+                            class="install-code"><code>&lt;script src="https://unpkg.com/black-friday-promo"&gt;&lt;/script&gt;</code></pre>
+                    </div>
+                    <div class="install-card">
+                        <h3>Import</h3>
+                        <pre class="install-code"><code>import BFPromo from 'black-friday-promo';</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features -->
+            <section class="features">
+                <h2 class="section-title">✨ Why Choose This Library?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Lightning Fast</h3>
+                        <p>Vanilla JavaScript with zero dependencies. Ultra-lightweight at just 5KB minified.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Fully Customizable</h3>
+                        <p>Every color, size, position, and animation can be configured to match your brand.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Responsive</h3>
+                        <p>Works perfectly on all devices and screen sizes out of the box.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Framework Agnostic</h3>
+                        <p>Works with vanilla JS, React, Vue, Angular, or any other framework.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Production Ready</h3>
+                        <p>Battle-tested components used by thousands of e-commerce sites.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Free & Open Source</h3>
+                        <p>MIT licensed. Use it anywhere, modify it however you want.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Made with ❤️ for Black Friday 2025 | MIT License</p>
+        </div>
+    </footer>
+
+    <script src="/dist/black-friday-promo.js"></script>
+    <script src="/demo/app.js"></script>
+</body>
+
+</html>

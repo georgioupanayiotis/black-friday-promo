@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Library Test</title>
+</head>
+
+<body>
+    <h1>Testing Library Load</h1>
+    <div id="result"></div>
+
+    <script src="../dist/black-friday-promo.js"></script>
+    <script>
+        const resultDiv = document.getElementById('result');
+
+        if (typeof BlackFridayPromo !== 'undefined') {
+            resultDiv.innerHTML = '<p style="color: green;">✓ BlackFridayPromo is defined!</p>';
+
+            if (BlackFridayPromo.default) {
+                resultDiv.innerHTML += '<p style="color: green;">✓ BlackFridayPromo.default exists!</p>';
+
+                // Try to create a ribbon
+                try {
+                    const ribbon = BlackFridayPromo.default.createRibbon({
+                        text: 'TEST',
+                        position: 'top-right'
+                    });
+                    resultDiv.innerHTML += '<p style="color: green;">✓ Successfully created ribbon!</p>';
+                } catch (err) {
+                    resultDiv.innerHTML += '<p style="color: red;">✗ Error creating ribbon: ' + err.message + '</p>';
+                }
+            } else {
+                resultDiv.innerHTML += '<p style="color: red;">✗ BlackFridayPromo.default is undefined</p>';
+            }
+        } else {
+            resultDiv.innerHTML = '<p style="color: red;">✗ BlackFridayPromo is not defined!</p>';
+        }
+    </script>
+</body>
+
+</html>

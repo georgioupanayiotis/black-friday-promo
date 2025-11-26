@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build && mkdir -p public && cp -r demo public/demo && cp -r dist public/dist && cp demo/index.html public/index.html"
+  publish = "public"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
