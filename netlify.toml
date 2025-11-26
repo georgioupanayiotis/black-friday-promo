@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build && mkdir -p public && cp -r demo public/demo && cp -r dist public/dist && cp demo/index.html public/index.html"
-  publish = "public"
+  command = "npm run build && cp -r dist demo/dist"
+  publish = "demo"
 
 [[redirects]]
   from = "/*"
