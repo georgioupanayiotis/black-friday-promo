@@ -35,13 +35,13 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/yourusername/black-friday-promo.git"
+        "url": "https://github.com/georgioupanayiotis/black-friday-promo.git"
     },
     "bugs": {
-        "url": "https://github.com/yourusername/black-friday-promo/issues"
+        "url": "https://github.com/georgioupanayiotis/black-friday-promo/issues"
     },
-    "homepage": "https://github.com/yourusername/black-friday-promo#readme",
-    "author": "",
+    "homepage": "https://black-friday-promo.netlify.app/",
+    "author": "Panayiotis Georgiou",
     "license": "MIT",
     "devDependencies": {
         "@rollup/plugin-typescript": "^11.1.5",
