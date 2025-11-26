@@ -6,6 +6,8 @@ A comprehensive, lightweight JavaScript library for creating stunning Black Frid
 ![bundle size](https://img.shields.io/bundlephobia/minzip/black-friday-promo?style=flat-square)
 ![license](https://img.shields.io/npm/l/black-friday-promo?style=flat-square)
 
+![Interactive Demo](assets/demo-preview.png)
+
 ## ✨ Features
 
 - 🎀 **Ribbons** - Eye-catching corner badges
