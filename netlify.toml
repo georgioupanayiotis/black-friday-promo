@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build && cp -r dist demo/dist"
+  command = "npm run build && mkdir -p demo/dist && cp dist/* demo/dist/"
   publish = "demo"
 
 [[redirects]]
