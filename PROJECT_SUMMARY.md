@@ -24,7 +24,7 @@ A complete, production-ready npm library for Black Friday promotional elements w
   - Vanilla JavaScript
   - React
   - CDN usage
-- **Examples Page** - Full working demos with products
+
 
 ### 📚 Documentation
 
@@ -47,7 +47,7 @@ npm run build
 The demo is already running at: **http://localhost:49159**
 
 - Main configurator: `http://localhost:49159/index.html`
-- Examples page: `http://localhost:49159/examples.html`
+
 
 ### 3. Install in Your Project
 
@@ -79,7 +79,7 @@ black-friday-promo/
 │   └── index.ts              # Main library source
 ├── demo/
 │   ├── index.html            # Interactive configurator
-│   ├── examples.html         # Live examples
+
 │   ├── styles.css            # Premium dark theme
 │   └── app.js                # Demo app logic
 ├── dist/                     # Built files (generated)
@@ -177,7 +177,7 @@ The demo website features:
 
 1. Edit `src/index.ts` for new features
 2. Run `npm run build` to rebuild
-3. Test in `demo/examples.html`
+3. Test in `demo/index.html`
 
 ## 📈 Performance
 
@@ -206,7 +206,7 @@ The demo website features:
 - Check `README.md` for full API docs
 - Use `QUICK_START.md` for quick examples
 - Visit demo site for interactive configuration
-- View `examples.html` for working demos
+
 
 ---
 

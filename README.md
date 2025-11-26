@@ -2,9 +2,9 @@
 
 A comprehensive, lightweight JavaScript library for creating stunning Black Friday promotional elements. Zero dependencies, fully customizable, and framework-agnostic.
 
-![npm version](https://img.shields.io/npm/v/black-friday-promo)
-![bundle size](https://img.shields.io/bundlephobia/minzip/black-friday-promo)
-![license](https://img.shields.io/npm/l/black-friday-promo)
+![npm version](https://img.shields.io/npm/v/black-friday-promo.svg?style=flat-square)
+![bundle size](https://img.shields.io/bundlephobia/minzip/black-friday-promo?style=flat-square)
+![license](https://img.shields.io/npm/l/black-friday-promo?style=flat-square)
 
 ## ✨ Features
 

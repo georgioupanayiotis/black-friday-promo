@@ -298,7 +298,7 @@ BFPromo.createRibbon({
 ## 📞 Need Help?
 
 - Check the [full documentation](README.md)
-- View [live examples](demo/examples.html)
+
 - Use the [interactive configurator](demo/index.html)
 
 ---

@@ -22,10 +22,6 @@ Your Black Friday Promo Library is ready! Here's everything you need to know.
    - Copy-paste ready snippets
    - Supports Vanilla JS, React, and CDN
 
-2. **Live Examples**: http://localhost:49159/examples.html
-   - Interactive demo buttons
-   - Product showcase
-   - All components in action
 
 ## 🚀 Quick Start (3 Steps)
 
@@ -515,7 +511,7 @@ Deploy the `demo/` folder to:
 ## 📞 Need Help?
 
 1. **Interactive Configurator**: http://localhost:49159/index.html
-2. **Live Examples**: http://localhost:49159/examples.html
+
 3. **Full API Docs**: README.md
 4. **Quick Examples**: QUICK_START.md
 5. **Project Overview**: PROJECT_SUMMARY.md
