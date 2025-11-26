@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build:demo && ls -la demo/dist/"
+  command = "npm install && npm run build:demo && ls -la demo/ && cat demo/index.html | grep 'black-friday-promo.js'"
   publish = "demo"
 
 [build.environment]
