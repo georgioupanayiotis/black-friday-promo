@@ -115,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderConfigForm();
     updateCode();
     setupCodeTabs();
+    setupInstallCopyButtons();
 });
 
 // Component selector
@@ -359,3 +360,35 @@ function clearPreview() {
         demoEl.remove();
     }
 }
+
+// Installation copy buttons
+function setupInstallCopyButtons() {
+    const copyButtons = document.querySelectorAll('.install-copy-btn');
+
+    copyButtons.forEach(button => {
+        button.addEventListener('click', async () => {
+            const textToCopy = button.dataset.copy;
+            const copyText = button.querySelector('.copy-text');
+
+            try {
+                await navigator.clipboard.writeText(textToCopy);
+
+                // Visual feedback
+                button.classList.add('copied');
+                copyText.textContent = 'Copied!';
+
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    copyText.textContent = 'Copy';
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy:', err);
+                copyText.textContent = 'Failed';
+                setTimeout(() => {
+                    copyText.textContent = 'Copy';
+                }, 2000);
+            }
+        });
+    });
+}
+

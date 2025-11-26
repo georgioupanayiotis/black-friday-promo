@@ -422,9 +422,9 @@ body {
 
 .install-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -442,18 +442,59 @@ body {
     color: #667eea;
 }
 
+.install-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.install-header h3 {
+    margin-bottom: 0;
+}
+
+.install-copy-btn {
+    background: rgba(102, 126, 234, 0.1);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    color: #667eea;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.install-copy-btn:hover {
+    background: rgba(102, 126, 234, 0.2);
+    border-color: #667eea;
+    transform: translateY(-1px);
+}
+
+.install-copy-btn.copied {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: #22c55e;
+    color: #22c55e;
+}
+
+
 .install-code {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 16px;
     overflow-x: auto;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 .install-code code {
     font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
     font-size: 0.85rem;
     color: #a8dadc;
+    white-space: pre-wrap;
+    word-break: break-all;
 }
 
 /* Features */
