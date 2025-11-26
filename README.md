@@ -228,7 +228,7 @@ BFPromo.createBadge('.product-image', {
 
 ## 🎨 Interactive Demo
 
-Visit our [interactive demo site](demo/index.html) to:
+Visit our [interactive demo site](https://black-friday-promo.netlify.app/) to:
 - Configure components visually
 - Generate copy-paste code
 - Preview components in real-time
@@ -338,10 +338,10 @@ MIT License - feel free to use in commercial projects!
 
 ## 🔗 Links
 
-- [Demo Site](demo/index.html)
-- [GitHub Repository](#)
-- [NPM Package](#)
-- [Report Issues](#)
+- [Demo Site](https://black-friday-promo.netlify.app/)
+- [GitHub Repository](https://github.com/georgioupanayiotis/black-friday-promo)
+- [NPM Package](https://www.npmjs.com/package/black-friday-promo)
+- [Report Issues](https://github.com/georgioupanayiotis/black-friday-promo/issues)
 
 ---
 
