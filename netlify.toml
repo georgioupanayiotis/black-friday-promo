@@ -1,6 +1,9 @@
 [build]
-  command = "npm run build:demo"
+  command = "npm install && npm run build:demo && ls -la demo/dist/"
   publish = "demo"
+
+[build.environment]
+  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/*"
