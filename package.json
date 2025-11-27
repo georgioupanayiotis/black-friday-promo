@@ -13,7 +13,7 @@
         "build": "rollup -c",
         "dev": "rollup -c -w",
         "demo": "npx serve .",
-        "build:demo": "npm run build && mkdir -p demo/dist && cp -r dist/* demo/dist/ && cp dist/black-friday-promo.js demo/",
+        "build:demo": "npm run build && rm -rf public && mkdir -p public && cp -r demo/* public/ && mkdir -p public/dist && cp -r dist/* public/dist/ && cp dist/black-friday-promo.min.js public/black-friday-promo.js && cleancss -o public/styles.css public/styles.css && terser public/app.js -o public/app.js && html-minifier-terser --collapse-whitespace --remove-comments --minify-css true --minify-js true -o public/index.html public/index.html",
         "prepublishOnly": "npm run build"
     },
     "keywords": [
@@ -44,9 +44,13 @@
     "author": "Panayiotis Georgiou",
     "license": "MIT",
     "devDependencies": {
+        "@rollup/plugin-terser": "^0.4.4",
         "@rollup/plugin-typescript": "^11.1.5",
+        "clean-css-cli": "^5.6.3",
+        "html-minifier-terser": "^7.2.0",
         "rollup": "^4.9.0",
         "rollup-plugin-postcss": "^4.0.2",
+        "terser": "^5.44.1",
         "tslib": "^2.6.2",
         "typescript": "^5.3.3"
     }

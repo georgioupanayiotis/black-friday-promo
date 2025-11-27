@@ -1,6 +1,6 @@
 [build]
-  command = "npm install && npm run build:demo && ls -la demo/ && cat demo/index.html | grep 'black-friday-promo.js'"
-  publish = "demo"
+  command = "npm install && npm run build:demo && ls -la public/"
+  publish = "public"
 
 [build.environment]
   NODE_VERSION = "18"
